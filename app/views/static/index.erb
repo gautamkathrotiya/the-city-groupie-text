@@ -1,0 +1,55 @@
+<header class="center_stage">
+  <h1>Groupie Text</h1>
+  <div class="context_bar"></div>
+</header>
+
+<h2 class="rule">Hey <%= @name %></h2>
+<input type="hidden" name="user_name" id="user_name" value="<%= @name %>"/>
+<% if @count != 0 %>
+<% if @groups %>
+
+<h5>Group:</h5>
+<% if @count == 1 %>
+	<input type="hidden" id="count_id" name="count_id" value="1"/>
+	 <% @groups.each do |use| %>
+		 <% if use.role_title == 'Leader'%>
+	 		<label>Name: <strong><%= use.name %></strong></label>
+	 		<input type="hidden" name="group_id" id="group_id" value="<%= use.id %>"/>
+	 		<input type="hidden" name="group_name" id="group_name" value="<%= use.name %>"/>
+
+		 <% end %>
+	 
+	<% end %>
+<% else %>	
+
+<form method="post" id="groupform">
+	<input type="hidden" name="count_id" id="count_id" value="0"/>
+<select name="group" id="groupdrpdown" style="height:auto; width: auto; min-width: 35%;">
+  <option value="0">Select a Group</option>
+<% @groups.each do |use| %>
+  <% if use.role_title == 'Leader'%>
+	<option value="<%= use.id %>"><%= use.name %></option>
+  <% end %>	
+<% end %>
+</select>
+</form>
+<% end %>
+<% end %>
+
+<h5 style="margin-top:10px;">Members:</h5>
+<div id="memberslist" style="line-height: 25px; margin-bottom:10px;" class="clearfix">
+<p>Please select group to view members</p>
+
+</div>
+<h3 class="rule">Send Notification to members</h3>
+<div id="msgDiv">
+   <div id="loading" style="color:red"></div>
+    <label>Enter Message Here</label><br/>
+		<textarea cols="24" id="message" name="message" rows="6" style="width: 315px;">
+</textarea><br /><span id="messagelimitext"></span><br />
+		<input id="sendmail" name="commit" type="submit" value="Send" class="btn btn_go" />
+</div>
+<% else %>
+	<h5>You are not authorized to send SMS/E-Mail</h5>
+<% end %>
+ 

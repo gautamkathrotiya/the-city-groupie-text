@@ -1,0 +1,42 @@
+.limiterBox {
+	border: 1px solid #000;
+	border-top: none;
+	background-color: #ffc;
+	padding: 3px 6px;
+	font-size: 10px;
+}
+
+#memberslist label {
+ margin: 0;
+ float: left;
+ width: 240px;
+}
+#memberslist input {
+float: left;
+margin: 6px 10px 0px 10px;
+}
+#memberslist label span {
+float: left;
+margin: 0px 0px 0px 0px;
+}
+
+#memberslist label {
+margin: 10px 0;
+float:left;
+width: 240px;
+}
+/*Members With Images */
+/*#memberslist input {
+float: left;
+margin: 20px 10px 0px 10px;
+}
+
+#memberslist label img {
+float: left;
+margin-right: 10px;
+}
+
+#memberslist label span {
+float: left;
+margin: 13px 0px 0px 0px;
+}*/

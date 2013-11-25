@@ -1,0 +1,3 @@
+== Welcome to City Texts
+
+-Rails Application developed as onthecity plugin

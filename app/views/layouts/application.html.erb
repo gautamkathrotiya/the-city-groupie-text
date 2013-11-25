@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rcplugin</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "tcplugin.helper" %>
+  <%= javascript_include_tag "groupie-text" %>
+  <%= javascript_include_tag "jquery.inputlimiter" %>
+  
+  <link rel="stylesheet" href="https://dcascn3rg03ga.cloudfront.net/appkit/v1.3/appkit.css" />
+  <script type="text/javascript" src="https://dcascn3rg03ga.cloudfront.net/appkit/v1.3/appkit-ie.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body style="font-family: Helvetica,Arial,sans-serif;">
+
+<%= yield %>
+
+</body>
+</html>
