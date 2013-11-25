@@ -30,6 +30,17 @@ Open up application.rb and replace all the following lines with your own informa
     
 You will need to create a new app in The City, as well as generating API keys for a User Admin to get the value for above. Contact The City help for support on this :-)
 
+Next, open up app/assets/javascripts/groupie-text.js
+
+    TheCity.PluginHelper.resizeIFrame({
+      subdomain: '2rc',    //Change this to your City subdomain
+      useSSL: true,       //Whether or not your plugin uses SSL
+      extra: 450,           //Extra number of pixels to expand iFrame height to
+      refresh: 0        //How often to check for new documentHeight, 0 to disable
+    });
+
+and replace the second line with **your** City subdomain.
+
 ##Requirements##
 
 ###Accounts###
