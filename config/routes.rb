@@ -6,8 +6,9 @@ Rcplugin::Application.routes.draw do
   match 'send' => 'sms#index'
   match 'sendsms' => 'sms#sendsms'
   match 'test', to: 'static#user_service'
-  match 'group', to: 'static#group_service'
+  match 'group/:id', to: 'static#group_service'
   match 'groupmember', to: 'static#get_group_members'
+  match 'groupcount', to: 'static#get_group_count'
   match 'user/:id', to: 'static#get_user_details'
   # The priority is based upon order of creation:
   # first created -> highest priority.

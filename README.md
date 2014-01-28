@@ -1,4 +1,4 @@
-the-city-groupie-text
+City Groupie Text
 =====================
 
 Plugin to allow group managers/leaders to send out texts from The City, written in Ruby.
@@ -30,10 +30,10 @@ Open up application.rb and replace all the following lines with your own informa
     
 You will need to create a new app in The City, as well as generating API keys for a User Admin to get the value for above. Contact The City help for support on this :-)
 
-Next, open up app/assets/javascripts/groupie-text.js
+Next, open up app/assets/javascripts/citytexting.js
 
     TheCity.PluginHelper.resizeIFrame({
-      subdomain: '2rc',    //Change this to your City subdomain
+      subdomain: 'CHANGE TO YOUR CITY SUBDOMAIN',    //Change this to your City subdomain
       useSSL: true,       //Whether or not your plugin uses SSL
       extra: 450,           //Extra number of pixels to expand iFrame height to
       refresh: 0        //How often to check for new documentHeight, 0 to disable
@@ -59,6 +59,12 @@ Obviously you need a City account, including a User Admin. You will also need a 
 + typhoeus
 + pg
 
+#Development#
+
+##Config##
+application.rb has separate sections for development and productions environments, see comments for details, it is pretty
+straightforward.
+
 ##Contributing##
 Fork, patch and submit a pull request. OR just email the code to jm@jmaddington.com
 
@@ -68,7 +74,7 @@ Please open up a Github issue.
 ##Getting Help##
 jm@jmaddington.com
 
-[@jmaddington](https://twitter.com/jmaddington)
+Twitter: [@jmaddington](https://twitter.com/jmaddington)
 
 ##Credits##
 [Two Rivers Church](http://www.tworiverschurch.org) sponsored the project, jmaddington managed it, [C.S. Preston](http://www.customsoftwarebypreston.com/) did all the initial coding.

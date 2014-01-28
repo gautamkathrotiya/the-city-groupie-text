@@ -25,6 +25,15 @@ margin: 10px 0;
 float:left;
 width: 240px;
 }
+
+.help {
+    background-color: #e2e2e2;
+}
+
+.help div {
+    padding: 10px;
+}
+
 /*Members With Images */
 /*#memberslist input {
 float: left;

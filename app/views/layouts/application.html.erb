@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag    "style", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "tcplugin.helper" %>
-  <%= javascript_include_tag "groupie-text" %>
+  <%= javascript_include_tag "citytexting" %>
   <%= javascript_include_tag "jquery.inputlimiter" %>
   
   <link rel="stylesheet" href="https://dcascn3rg03ga.cloudfront.net/appkit/v1.3/appkit.css" />
@@ -15,7 +15,26 @@
 </head>
 <body style="font-family: Helvetica,Arial,sans-serif;">
 
+<header class="center_stage">
+  <h1>Groupie Text!</h1>
+  <div class="context_bar"></div>
+</header>
+
 <%= yield %>
 
+<div class="grid_3 help omega">
+ <div>
+   <h2 class="rule">What is Groupie Text?</h2>
+      <p>Groupie text allows church leaders to text members of their group. Members who do not have a mobile
+        phone number entered into their profile will receive an email instead. It is up to each group leader
+        to decide whether or not they wish to communicate this way.</p>
+
+      <h2 class="rule">How To Use It</h2>
+      <p>On the left hand side of this page you see a dropdown list of groups that you are a leader or manager of, choose a group.</p>
+      <p>After a moment, all of the members of the group should appear in alphabetical order, check the members you wish
+        to text.</p>
+      <p>When you are down selecting the members type a message in the box at the bottom, and then hit "Send." Your name
+        and the name of the group will be automatically added to the text message.</p></div>
+    </div>
 </body>
 </html>
