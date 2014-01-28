@@ -7,26 +7,51 @@ Plugin to allow group managers/leaders to send out texts from The City, written 
 
 Open up application.rb and replace all the following lines with your own information from The City:
 
-    #Replace everything below with your own info
-    THE_CITY_SECRET = 'YOUR CITY APP SECRET'
-    THE_CITY_APP_ID = 'YOUR CITY APP ID'
+    #Development creds & keys
+      if ENV['RAILS_ENV'] == 'development'
+        puts 'CTDEBUG: In development environment'
 
-    TWILIO_ACCOUNT = 'YOUR TWILIO ACCOUNT'
-    TWILIO_TOKENID = 'YOUR TWILIO TOKEN'
-    TWILIO_FROM_NUMBER = 'YOUR TWILIO NUMBER' #like '+15551231234'
+        DEV_ENV = true
+        THE_CITY_SECRET = 'YOUR DEV CITY SECRET HERE'
+        THE_CITY_APP_ID = 'YOUR DEV CITY APP ID HERE'
 
-    CITY_ADMIN_SECRET = 'YOUR CITY ADMIN SECRET'
-    CITY_USER_TOKEN = 'YOUR CITY USER TOKEN'
+        TWILIO_ACCOUNT = 'YOUR DEV TWILIO ACCOUNT HERE'
+        TWILIO_TOKENID = 'YOUR DEV TWILIO TOKEN ID HERE'
+        TWILIO_FROM_NUMBER = 'YOUR DEV TWILIO FROM NUMBER HERE'
 
-    CITY_SUBDOMAIN = 'YOUR CITY SUBDOMAIN'
+        CITY_ADMIN_SECRET = 'YOUR DEV CITY ADMIN SECRET HERE'
+        CITY_USER_TOKEN = 'YOUR DEV CITY USER TOKEN HERE'
 
-    SMTP_USER = 'YOUR SMTP SERVER USERNAME'
-    SMTP_PASSWORD = 'YOUR SMTP SERVER PASSWORD'
-    SMTP_DOMAIN = 'YOUR EMAIL DOMAIN'
-    SMTP_ADDRESS = 'YOUR SMTP SERVER ADDRESS'
-    SMTP_FROM = 'YOUR SMTP SERVER ADDRESS'
-    SMTP_PORT =' YOUR SMTP SERVER PORT'
-    SMTP_TLS = true #Change as needed
+        SMTP_USER = 'YOUR DEV SMTP USER HERE'
+        SMTP_PASSWORD = 'YOUR DEV SMTP PASSWORD HERE'
+        SMTP_DOMAIN = 'YOUR DEV SMTP DOMAIN HERE'
+        SMTP_ADDRESS = 'YOUR DEV SMTP ADDRESS HERE'
+        SMTP_FROM = 'YOUR DEV SMTP FROM HERE'
+        SMTP_PORT = 587 #CHANGE AS NEEDED
+        SMTP_TLS = true #Change as needed
+      else
+        #Production creds & keys
+        puts 'CTDEBUG: In production environment'
+
+        DEV_ENV = false
+        THE_CITY_SECRET = 'YOUR PRODUCTION CITY SECRET HERE'
+        THE_CITY_APP_ID = 'YOUR PRODUCTION CITY APP ID HERE'
+
+        TWILIO_ACCOUNT = 'YOUR PRODUCTION TWILIO ACCOUNT HERE'
+        TWILIO_TOKENID = 'YOUR PRODUCTION TWILIO TOKENID HERE'
+        TWILIO_FROM_NUMBER = 'YOUR PRODUCTION TWILIO FROM NUMBER HERE'
+
+        CITY_ADMIN_SECRET = 'YOUR PRODUCTION CITY ADMIN SECRET HERE'
+        CITY_USER_TOKEN = 'YOUR PRODUCTION CITY USER TOKEN HERE'
+
+        SMTP_USER = 'YOUR PRODUCTION SMTP USER HERE'
+        SMTP_PASSWORD = 'YOUR PRODUCTION SMTP PASSWORD HERE'
+        SMTP_DOMAIN = 'YOUR PRODUCTION SMTP DOMAIN HERE'
+        SMTP_ADDRESS = 'YOUR PRODUCTION SMTP ADDRESS HERE'
+        SMTP_FROM = 'YOUR PRODUCTION SMTP FROM HERE'
+        SMTP_PORT = 587 #CHANGE AS NEEDED
+        SMTP_TLS = true #Change as needed
+      end
     
 You will need to create a new app in The City, as well as generating API keys for a User Admin to get the value for above. Contact The City help for support on this :-)
 
