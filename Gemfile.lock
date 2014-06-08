@@ -37,6 +37,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    delayed_job (4.0.0)
+      activesupport (>= 3.0, < 4.1)
+    delayed_job_active_record (4.0.0)
+      activerecord (>= 3.0, < 4.1)
+      delayed_job (>= 3.0, < 4.1)
     erubis (2.7.0)
     ethon (0.5.3)
       ffi (~> 1.0.11)
@@ -59,14 +64,16 @@ GEM
     jwt (0.1.8)
       multi_json (>= 1.5)
     libv8 (3.11.8.17)
+    lograge (0.3.0)
+      actionpack (>= 3)
+      activesupport (>= 3)
+      railties (>= 3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
     multi_json (1.8.0)
     multipart-post (1.2.0)
-    mysql (2.9.1)
-    mysql (2.9.1-x86-mingw32)
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
@@ -138,9 +145,10 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  delayed_job_active_record
   execjs
   jquery-rails
-  mysql
+  lograge
   pg
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)

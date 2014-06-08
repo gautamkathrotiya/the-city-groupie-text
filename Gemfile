@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.1.1'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 #gem 'sqlite3'
 
-gem 'mysql'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,9 +26,13 @@ gem 'twilio-ruby'
 gem "sendgrid", "~> 1.2.0"
 gem 'typhoeus'
 
+gem 'delayed_job_active_record'
+
 group :production do
   gem 'pg'
 end
+
+gem "lograge"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
